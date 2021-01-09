@@ -1,0 +1,16 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.undecorated-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.checkbox-list-item input, p {
+  display: inline;
+}
+
+div {
+  display: block;
+}

@@ -1,0 +1,18 @@
+<h1>All Tasks</h1>
+
+<ul class="undecorated-list">
+  <% @tasks.each do |task| %>
+  <div class="checkbox-list-item">
+    <li>
+      <% if task.completed %>
+        <input type="checkbox" checked>
+      <% else %>
+        <input type="checkbox" unchecked>
+      <% end %>
+      <p><%= link_to task.title, task_path(task)%></p>
+      <p> <%= link_to 'edit', edit_task_path(task), method: :get %> </p>
+      <p> <%= link_to 'delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %> </p>
+    </li>
+  </div>
+  <% end %>
+</ul>
